@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify Sans">
+        <!--- color palette: #BF045B, #062A73, #038C7F, #BF712C, #AB8279 --->
+        <style>
+             body {
+                background-color: #062A73;
+               
+
+            }
+            .sticky {
+                
+                position: absolute;
+                background-color: #CCCC6C;
+                width: 250px;
+                height: 250px;
+                box-shadow: 10px 10px #038C7F;
+                margin-left: 10px;
+                margin-top: 20px;
+                padding: 5px;
+            }
+
+            .textcontentstuff {
+                margin: 10px;
+            }
+            
+            .silly {
+                padding: 5px;
+            }
+
+            #drawsticky {
+                top: 250px;
+                right: 50px;
+               
+            }
+
+            .screen {
+                position: absolute;
+                text-align: center;
+                border-top: 15px solid #BF045B;
+                border-left: 15px solid #038C7F;
+                border-right: 15px solid #038C7F;
+                border-bottom: 15px solid #BF045B;
+                background-color: #BF712C;
+                width: 70%;
+                height: 600px;
+                z-index: -2;
+                top: 75px;
+                left: 200px;
+                border-radius: 5px;
+                font-family: "Pixelify Sans", sans-serif;
+                color: #ff8fc3;
+                text-shadow: 2px 2px #038C7F;
+            }
+
+            .smallscreen {
+                margin-left: 50px;
+                margin-top: 70px;
+                position:absolute;
+                z-index: -1;
+                background-color: #038C7F;
+                width: 60%;
+                height: 450px;
+                border-radius: 10px;
+            }
+
+            .item {
+                opacity: 0.75;
+                position: absolute;
+                top: -10px;
+                left: 130px;
+                z-index: -0.5;
+            }
+
+            .item:hover {
+                opacity: 1;
+            }
+
+            .arrow {
+                position: absolute;
+                display: inline;
+                top: 200px;
+                left: 30px;
+                z-index: -0.7;
+            }
+
+            .arrown {
+                position: absolute;
+                display: inline;
+                top: 200px;
+                right: 35px;
+                z-index: -0.7;
+            }
+
+            
+            .arrow:hover {
+                cursor: pointer;
+            }
+
+            .arrown:hover {
+                cursor: pointer;
+            }
+
+            .label {
+                position: absolute;
+                left: 110px;
+                bottom: 10px;
+            }
+            #necklace {
+                display: block;
+            }
+            #bandaids {
+                display: none;
+            }
+
+            #bandaidspic {
+                position:absolute;
+                left: 110px !important;
+                top: 50px;
+            }
+            #tretta {
+                display: none;
+            }
+
+            #trettapic {
+                position: absolute;
+                top: -10px;
+                left: 120px;
+            }
+
+            .desc {
+                position: absolute;
+                font-size: 17px;
+                text-align: left !important;
+                right: -290px;
+                top: 17px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="sticky">
+            <div class="textcontentstuff">
+                <h2>to-go:</h2>
+                <ul>
+                    <li><a href="wrapup-home.html">home</a></li>
+                    <li><a href="wrapup-1.html">the convenience store</a> </li>
+                    <li><a href="wrapup-2.html">the back shelves</a> </li>
+                    <li><a href="wrapup-3.html">the cashier</a></li>
+                    <li><a href="wrapup-4.html">the backrooms</a> </li>
+                </ul>
+            </div>
+        </div>      
+
+        <div class="screen">
+            <div class="smallscreen">
+                <p class="textcontentstuff">[ insert item here ]</p>
+
+                <div id="necklace">
+                    <p class="arrow" onclick="next('necklace','tretta')"><</p>
+                    <p class="item" id="necklacepic"> <img src="https://i.imgur.com/cAXyo8V.png" alt="clothing" height="450px"></p>
+                    <p class="arrown" onclick="next('necklace','bandaids')">></p>
+                    <p class="label">type: clothing, name: concert necklace<br> side effects: ???</p>
+                    <p class="desc">concert necklace<br> <br>a trinket of sorts, an<br> accessory from an old concert. <br>it serves little purpose other<br> than as a decorative ornament<br>
+                    on the back shelves, but has<br> suffered minimal wear over time.<br> the store keeper's forgotten<br> where it's from, or when, and the<br> faces at the concert are blurry<br>
+                    now, but it's a nice reminder...if<br> you remember where you put it.</p>
+                </div>
+
+                <div id="bandaids">
+                    <p class="arrow" onclick="next('bandaids','necklace')"><</p>
+                    <p class="item" id="bandaidspic"> <img src="https://i.imgur.com/QTrQv0o.png" alt="first-aid" height="330px"></p>
+                    <p class="arrown" onclick="next('bandaids','tretta')">></p>
+                    <p class="label">type: first-aid, name: bandaids <br> side effects: don't have to be hurt</p>
+                    <p class="desc">bandaids <br><br>the most basic of first-aid <br>options. optimal for<br> everyday cuts and scrapes,<br> whether they be on your<br> knees or your hands
+                    (though<br> they do not work very well on<br> fingers-- it's hard to wrap<br> around them). like socks,<br> they come in a variety of<br> sizes and designs, however, the<br> store
+                    has yet to stock a brand<br> that is truly waterproof, and<br> their value with treating cuts is<br> debatable-- after all, "don't cuts<br> close up by themselves anyway?"
+                    <br>restores half a heart.</p>
+                </div>
+
+                <div id="tretta">
+                    <p class="arrow" onclick="next('tretta','bandaids')"><</p>
+                    <p class="item" id="trettapic"> <img src="https://i.imgur.com/SElpVq3.png" alt="arcade chip" height="400px"></p>
+                    <p class="arrown" onclick="next('tretta','necklace')">></p>
+                    <p class="label">type: chip, name: pokemon tretta game chips <br> side effects: summons a companion</p>
+                    <p class="desc">pokemon tretta game chips <br><br> physical embodiments of a fond<br> memory, though now vague. while<br> the machine and its<br> corresponding game has now <br>been
+                    discontinued,<br> within these chips it is said that<br> there lie dormant companions<br> waiting to be released, though<br> the most that is left in the<br> fragmented mind of the store<br>
+                    keeper is a curiously designed<br> piece of technology set outside<br> a large supermarket.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="sticky" id="drawsticky">
+            <div class="silly">
+                <img src="https://i.pinimg.com/236x/89/16/b3/8916b30a253e2273e3db60a78584189b.jpg"
+                alt="kel" height="200px">
+                <p><i>get lunch money for pizza</i></p>
+            </div>
+        </div>
+
+        <script>
+            function next(current, after) {
+                var rn = document.getElementById(current);
+                var fr = document.getElementById(after);
+
+                fr.style.display = "block";
+                rn.style.display = "none";
+                
+}
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify Sans">
+        <!--- color palette: #F20574, #083DA6, #04BFAD, #F28F38, #DDA99D --->
+        <style>
+            body {
+                background-color: #083DA6;
+               
+
+            }
+            .sticky {
+                position: absolute;
+                background-color: #FFFF88;
+                width: 250px;
+                height: 250px;
+                box-shadow: 10px 10px #04BFAD;
+                margin-left: 10px;
+                margin-top: 20px;
+                padding: 5px;
+            }
+
+            .textcontentstuff {
+                margin: 10px;
+            }
+            
+            .silly {
+                padding: 5px;
+            }
+
+            #drawsticky {
+                top: 250px;
+                right: 50px;
+               
+            }
+
+            .screen {
+                position: absolute;
+                text-align: center;
+                border-top: 15px solid #F20574;
+                border-left: 15px solid #04BFAD;
+                border-right: 15px solid #04BFAD;
+                border-bottom: 15px solid #F20574;
+                background-color: #F28F38;
+                width: 70%;
+                height: 600px;
+                z-index: -1;
+                top: 75px;
+                left: 200px;
+                border-radius: 5px;
+                font-family: "Pixelify Sans", sans-serif;
+                color: #F20574;
+                text-shadow: 2px 2px #04BFAD;
+            }
+
+            h1 {
+                margin-top: 50px;
+                font-size: 40px;
+            }
+
+            .text {
+                font-size: 20px;
+            }
+
+            .labels {
+                p{display: inline;
+                margin-right: 75px;}
+            }
+
+            #cashier {
+                position: absolute;
+                top: -50px;
+                left: 60px
+            }
+
+            #cashier:hover {
+                cursor: pointer;
+            }
+
+            .speech {
+                text-align: center;
+                position: absolute;
+                top: 100px;
+                right: 250px;
+                font-size: 20px !important;
+            }
+
+            #nvm {
+                display: none;
+            }
+
+            #notme {
+                display: none;
+            }
+            #frno {
+                display: none;
+            }
+
+            #whatbuy {
+                display: none;
+            }
+            #howmuch {
+                display: none;
+                position: relative;
+                top: 30px;
+                right: 50px;
+            }
+            #goodbye {
+                display: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="sticky">
+            <div class="textcontentstuff">
+                <h2>to-go:</h2>
+                <ul>
+                    <li><a href="wrapup-home.html">home</a></li>
+                    <li><a href="wrapup-1.html">the convenience store</a> </li>
+                    <li><a href="wrapup-2.html">the back shelves</a> </li>
+                    <li><a href="wrapup-3.html">the cashier</a></li>
+                    <li><a href="wrapup-4.html">the backrooms</a> </li>
+                </ul>
+            </div>
+        </div>      
+
+        <div class="screen">
+            <div id="cashier">
+                <img onclick="next()" src="https://i.imgur.com/W1B9cLq.png" alt="person" height="650px">
+            </div>
+            <div class="speech">
+                <p id="mcd">hello, welcome to mcdonald's,<br>what can i get for you today?</p>
+                <p id="nvm">oh. nevermind. next.</p>
+                <p id="notme">no, i don't run the store.<br> that's why its too high for me.</p>
+                <p id="frno">no, i really am not the shop keeper.<br> they left a while ago.</p>
+                <p id="whatbuy">so, what are you buying today?</p>
+                <p id="howmuch"></p>      
+                <p id="goodbye">hope you have a good day. <br>please come again.</p>
+            </div>
+    
+        </div>
+
+<!---figure out how to not break law later idk-->
+        <div class="sticky" id="drawsticky">
+            <div class="silly">
+                <img src="https://i.pinimg.com/236x/89/16/b3/8916b30a253e2273e3db60a78584189b.jpg"
+                alt="kel" height="200px">
+                <p><i>get lunch money for pizza</i></p>
+            </div>
+        </div>
+
+
+        <script>
+            var price = Math.floor(Math.random() * 100);
+            var decprice = Math.floor(Math.random() * 100);
+            document.getElementById('howmuch').innerHTML = "That'll be... $" + price.toString() + '.' + decprice.toString() + '.';
+
+            let currentval = 0;
+            function next() {
+                const dialogue = ['mcd', 'nvm', 'notme', 'frno', 'whatbuy', 'howmuch', 'goodbye'];
+                var current = dialogue[currentval];
+                var after = dialogue[currentval + 1];
+
+                var rn = document.getElementById(current);
+                var fr = document.getElementById(after);
+
+                currentval = currentval + 1;
+
+                fr.style.display = "block";
+                rn.style.display = "none";
+            
+                }
+                
+        </script>   
+    </body>
+</html>

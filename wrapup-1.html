@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify Sans">
+        <!--- color palette: #F20574, #083DA6, #04BFAD, #F28F38, #DDA99D --->
+        <style>
+             body {
+                background-color: #083DA6;
+               
+
+            }
+            .sticky {
+                
+                position: absolute;
+                background-color: #FFFF88;
+                width: 250px;
+                height: 250px;
+                box-shadow: 10px 10px #04BFAD;
+                margin-left: 10px;
+                margin-top: 20px;
+                padding: 5px;
+            }
+
+            .textcontentstuff {
+                margin: 10px;
+            }
+            
+            .silly {
+                padding: 5px;
+            }
+
+            #drawsticky {
+                top: 250px;
+                right: 50px;
+               
+            }
+
+            .screen {
+                position: absolute;
+                text-align: center;
+                border-top: 15px solid #F20574;
+                border-left: 15px solid #04BFAD;
+                border-right: 15px solid #04BFAD;
+                border-bottom: 15px solid #F20574;
+                background-color: #F28F38;
+                width: 70%;
+                height: 600px;
+                z-index: -2;
+                top: 75px;
+                left: 200px;
+                border-radius: 5px;
+                font-family: "Pixelify Sans", sans-serif;
+                color: #F20574;
+                text-shadow: 2px 2px #04BFAD;
+            }
+
+            .smallscreen {
+                margin-left: 50px;
+                margin-top: 70px;
+                position:absolute;
+                z-index: -1;
+                background-color: #04BFAD;
+                width: 60%;
+                height: 450px;
+                border-radius: 10px;
+            }
+
+            .item {
+                opacity: 0.75;
+                position: absolute;
+                top: -10px;
+                left: 60px;
+                z-index: -0.5;
+            }
+
+            .item:hover {
+                opacity: 1;
+            }
+
+            .arrow {
+                position: absolute;
+                display: inline;
+                top: 200px;
+                left: 30px;
+                z-index: -0.7;
+            }
+
+            .arrown {
+                position: absolute;
+                display: inline;
+                top: 200px;
+                right: 35px;
+                z-index: -0.7;
+            }
+
+            
+            .arrow:hover {
+                cursor: pointer;
+            }
+
+            .arrown:hover {
+                cursor: pointer;
+            }
+
+            .label {
+                position: absolute;
+                left: 100px;
+                bottom: 10px;
+            }
+            #kffrb {
+                display: block;
+            }
+            #monster {
+                display: none;
+            }
+
+            #monsterpic {
+                position:absolute;
+                left: 95px !important;
+                top: 30px;
+            }
+            #socks {
+                display: none;
+            }
+
+            #sockspic {
+                position: absolute;
+                top: 30px;
+                left: 80px;
+            }
+
+            .desc {
+                position: absolute;
+                font-size: 17px;
+                text-align: left !important;
+                right: -290px;
+                top: 17px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="sticky">
+            <div class="textcontentstuff">
+                <h2>to-go:</h2>
+                <ul>
+                    <li><a href="wrapup-home.html">home</a></li>
+                    <li><a href="wrapup-1.html">the convenience store</a> </li>
+                    <li><a href="wrapup-2.html">the back shelves</a> </li>
+                    <li><a href="wrapup-3.html">the cashier</a></li>
+                    <li><a href="wrapup-4.html">the backrooms</a> </li>
+                </ul>
+            </div>
+        </div>      
+
+        <div class="screen">
+            <div class="smallscreen">
+                <p class="textcontentstuff">[ insert item here ]</p>
+
+                <div id="kfrrb">
+                    <p class="arrow" onclick="next('kfrrb','socks')"><</p>
+                    <p class="item" id="kfrrbpic"> <img src="https://i.imgur.com/aDj9UII.png" alt="sustenance" width="400px"></p>
+                    <p class="arrown" onclick="next('kfrrb','monster')">></p>
+                    <p class="label">type: sustenance, name: kimchi fried rice rice ball<br> side effects: don't have to starve</p>
+                    <p class="desc">kimchi fried rice rice ball<br> <br>legends say that a long time <br>ago (approximately one year<br> and three months ago),
+                    a youth<br> with no real purpose in life set<br> out on a grand quest for this<br> form of sustenance. though the<br> tale has gotten vague over<br> time--
+                    some records state they<br> were killed in combat with an<br> angered wyvern, others that<br> they'd never actually step foot<br> outside their blank world--
+                    this<br> humble rice ball still serves as a<br> lifeline for many wandering souls<br> (who cannot really afford <br>anything else).</p>
+                </div>
+
+                <div id="monster">
+                    <p class="arrow" onclick="next('monster','kfrrb')"><</p>
+                    <p class="item" id="monsterpic"> <img src="https://i.imgur.com/AW1jWgq.png" alt="sustenance" height="350px"></p>
+                    <p class="arrown" onclick="next('monster','socks')">></p>
+                    <p class="label">type: sustenance, name: lemonade monster <br> side effects: don't have to be thirsty</p>
+                    <p class="desc">lemonade monster <br><br>a refreshing drink that doesn't<br> really taste like lemonade.<br> supposedly high in caffeine,<br> however, this seems
+                    to be more<br> myth than fact-- the store<br> keeper regularly reports feeling<br> little to no difference in energy<br> levels after downing a can. "it<br> just tastes 
+                    good," read the<br> note left in response to the <br>question of:<br>"why?"</p>
+                </div>
+
+                <div id="socks">
+                    <p class="arrow" onclick="next('socks','monster')"><</p>
+                    <p class="item" id="sockspic"> <img src="https://i.imgur.com/sJ8fpjy.png" alt="clothing" height="300px"></p>
+                    <p class="arrown" onclick="next('socks','kfrrb')">></p>
+                    <p class="label">type: clothing, name: convenience store socks <br> side effects: can wear on feet</p>
+                    <p class="desc">convenience store socks <br><br> these articles of clothing<br> are quite popular. often<br> worn on feet, they can be<br> found in a variety of designs<br> and 
+                    colors-- however, there<br> still exists a certain stigma<br> against colored socks, with<br> many institutions of education<br> preferring their socks to be<br> black or white
+                    rather than a<br> colored design. here at <b>side<br> quest: buy...smth i forgot<br></b> the store keeper takes pride in<br> offering a simple yet<br> personality-filled selection 
+                    of<br> socks, and has been a trusted<br> souce of these garments for<br> the past three years.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="sticky" id="drawsticky">
+            <div class="silly">
+                <img src="https://i.pinimg.com/236x/89/16/b3/8916b30a253e2273e3db60a78584189b.jpg"
+                alt="kel" height="200px">
+                <p><i>get lunch money for pizza</i></p>
+            </div>
+        </div>
+
+        <script>
+            function next(current, after) {
+                var rn = document.getElementById(current);
+                var fr = document.getElementById(after);
+
+                fr.style.display = "block";
+                rn.style.display = "none";
+                
+}
+        
+        </script>
+    </body>
+</html>

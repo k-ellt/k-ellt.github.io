@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify Sans">
+        <!--- color palette: #F20574, #083DA6, #04BFAD, #F28F38, #DDA99D --->
+        <style>
+            body {
+                background-color: #083DA6;
+                animation: rgb 3s infinite;
+
+            }
+            .sticky {
+                position: absolute;
+                background-color: #FFFF88;
+                width: 250px;
+                height: 250px;
+                box-shadow: 10px 10px #04BFAD;
+                margin-left: 10px;
+                margin-top: 20px;
+                padding: 5px;
+                z-index: 2;
+              
+            }
+
+            .textcontentstuff {
+                margin: 10px;
+            }
+            
+            .silly {
+                padding: 5px;
+            }
+
+            #drawsticky {
+                top: 250px;
+                right: 50px;
+                
+               
+            }
+
+            .screen {
+                position: absolute;
+                text-align: center;
+                border-top: 15px solid #F20574;
+                border-left: 15px solid #04BFAD;
+                border-right: 15px solid #04BFAD;
+                border-bottom: 15px solid #F20574;
+                background-color: #F28F38;
+                width: 70%;
+                height: 600px;
+                z-index: 1;
+                top: 75px;
+                left: 200px;
+                border-radius: 5px;
+                font-family: "Pixelify Sans", sans-serif;
+                color: #F20574;
+                text-shadow: 2px 2px #04BFAD;
+                animation: rgb 3s infinite;
+            }
+
+            h1 {
+                margin-top: 50px;
+                font-size: 40px;
+            }
+
+            .text {
+                font-size: 20px;
+            }
+
+            .labels {
+                p{display: inline;
+                margin-right: 75px;}
+            }
+        
+            #toro {
+                position: absolute;
+                z-index: 4;
+                top: 100px;
+                left: -200px;
+                animation: torospin 400ms infinite;
+            }
+
+            .player:hover {
+                cursor: pointer;
+            }
+
+            @keyframes rgb{
+                0%{background-color: blue;}
+                14.3%{background-color: blueviolet;}
+                28.6%{background-color: red}
+                42.9%{background-color: orange;}
+                57.2%{background-color: yellow;}
+                71.5%{background-color: rgb(34, 255, 0);}
+                85.8%{background-color: cyan;}
+                100%{background-color: rgb(0, 81, 255);}
+            }
+
+            @keyframes torospin{
+                0%{rotate: 0deg;}
+                12.5%{rotate: 45deg;}
+                25%{rotate: 90deg;}
+                37.5%{rotate: 135deg;}
+                50%{rotate: 180deg;}
+                62.5%{rotate: 225deg;}
+                75%{rotate: 270deg;}
+                87.5%{rotate: 315deg;}
+                100%{rotate: 360deg;}
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="sticky">
+            <div class="textcontentstuff">
+                <h2>to-go:</h2>
+                <ul>
+                    <li><a href="wrapup-home.html">home</a></li>
+                    <li><a href="wrapup-1.html">the convenience store</a> </li>
+                    <li><a href="wrapup-2.html">the back shelves</a> </li>
+                    <li><a href="wrapup-3.html">the cashier</a></li>
+                    <li><a href="wrapup-4.html">the backrooms</a> </li>
+                </ul>
+            </div>
+        </div>      
+
+        <div class="screen">
+            <h1 onclick="musict()">WELCOME! Kelly Choi can list all of txt members Yeonjun Soobin Taehyun Hueningkai Byeomgyu<br>(uhhh -me) -E.K., 2025</h1>
+            <p class="text">this site has been tampered with by outside sources.<br>please appreciate any inconsistencies. </p>
+            <p class="text">one hundred words isn't that much, actually. it's nowhere near to filling a page, even double spaced (size 12, times new roman)
+                and there isn't a word count on visual studio code either, so i'm not sure how long this'll end up to be-- whether it'll surpass or fall short 
+                of that "one hundred words" apparently it's mother's day today, so happy mother's day, sad that we;ll be back in school tomorrow. but i guess it
+                can't be helped. i feel a bit bad for the cashier, the counter is a bit tall, but it's also a bit funny, and i hope the cashier gets a life outside
+                of working here and thinking it's mcdonald's. i don't think the shopkeeper's coming back.
+            </p>
+            <audio id="peak" loop autoplay>
+                <source src="bounce(i just wanna dance).mp3">
+            </audio>
+            <img class="player" id="toro" src="https://i.imgur.com/S9BKLry.png" alt="toro" height="600px" onclick="musicc()">
+        </div>
+
+<!---figure out how to not break law later idk-->
+        <div class="sticky" id="drawsticky">
+            <div class="silly">
+                <img src="https://i.imgur.com/yvmVKvd.jpeg"
+                alt="no crime" height="200px">
+                <p><i>don't be a criminal</i></p>
+            </div>
+        </div>
+
+    </body>
+</html>
