@@ -78,6 +78,7 @@
             }
 
             .speech {
+                display: block;
                 text-align: center;
                 position: absolute;
                 top: 100px;
@@ -85,17 +86,18 @@
                 font-size: 20px !important;
             }
 
+            #mcd {
+                display: none;
+            }
             #nvm {
                 display: none;
             }
-
             #notme {
                 display: none;
             }
             #frno {
                 display: none;
             }
-
             #whatbuy {
                 display: none;
             }
@@ -106,6 +108,29 @@
                 right: 50px;
             }
             #goodbye {
+                display: none;
+            }
+            #still {
+                display: none;
+            }
+            #weather {
+                display: none;
+            }
+            #back {
+                display: none;
+            }#quiet {
+                display: none;
+            }
+            #sound {
+                display: none;
+            }
+            #idk {
+                display: none;
+            }
+            #oh {
+                display: none;
+            }
+            #odd {
                 display: none;
             }
         </style>
@@ -126,10 +151,13 @@
         </div>      
 
         <div class="screen">
+            <p><i>the cashier's a bit lonely. would you mind talking to them? <br>you might have to tap them on the shoulder, though. 
+            </i></p>
             <div id="cashier">
                 <img onclick="next()" src="https://i.imgur.com/W1B9cLq.png" alt="person" height="650px">
             </div>
             <div class="speech">
+                <p id="blank">...</p>
                 <p id="mcd">hello, welcome to mcdonald's,<br>what can i get for you today?</p>
                 <p id="nvm">oh. nevermind. next.</p>
                 <p id="notme">no, i don't run the store.<br> that's why its too high for me.</p>
@@ -137,6 +165,14 @@
                 <p id="whatbuy">so, what are you buying today?</p>
                 <p id="howmuch"></p>      
                 <p id="goodbye">hope you have a good day. <br>please come again.</p>
+                <p id="still">oh, you're still here?</p>
+                <p id="weather">well, the weather's quite <br>nice, isn't it?</p>
+                <p id="back">the back shelves? no, i can't<br> say i've looked there recently.</p>
+                <p id="odd">the shopkeeper leaves their<br> odd things there, i think.</p>
+                <p id="quiet">it's not bad. i'm getting paid.<br> just a bit quiet.</p>
+                <p id="sound">what's that? noises and lights <br>from the back?</p>
+                <p id="idk">i don't really know any of it. <br>you should ask the shopkeeper<br> when they're back.</p>
+                <p id="oh">oh, you're leaving? well, that's fair.<br> please come again.</p>
             </div>
     
         </div>
@@ -158,7 +194,7 @@
 
             let currentval = 0;
             function next() {
-                const dialogue = ['mcd', 'nvm', 'notme', 'frno', 'whatbuy', 'howmuch', 'goodbye'];
+                const dialogue = ['blank','mcd', 'nvm', 'notme', 'frno', 'whatbuy', 'howmuch', 'goodbye', 'still', 'weather', 'back', 'odd', 'quiet', 'sound', 'idk', 'oh'];
                 var current = dialogue[currentval];
                 var after = dialogue[currentval + 1];
 
